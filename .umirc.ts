@@ -7,6 +7,8 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/publicity' },
     { path: '/serve', component: '@/pages/serve' },
+    { path: '/science', component: '@/pages/science' },
+
   ],
   fastRefresh: {},
 });

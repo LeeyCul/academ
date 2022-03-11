@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import cls from 'classnames'
 import logoImg from '@/image/logo.png'
 import styles from './style.less'
-
+import { scrollToAnchor } from '@/utils'
 interface Props {
-  menu: { text: string, key: number }[]
+  menu: { text: string, key: number, id?: string }[]
   title: string
   backGround?: string
   logo?: string
 }
 
 interface MenuProps {
-  menuList: { text: string, key: number }[]
+  menuList: { text: string, key: number, id?: string }[]
 }
 
 interface SigleItemProps {
@@ -24,7 +24,7 @@ const SigleItem = ({ text, active, onClick }: SigleItemProps) => {
   return <div onClick={onClick} className={cls(styles.sigleText, { [styles.activeSigle]: active })}>{text}</div>
 }
 
-function Header({ menu,logo,title,backGround }:Props) {
+function Header({ menu, logo, title, backGround }: Props) {
   const [currentKey, setCurrentKey] = useState<number>(0)
 
   const clsName = cls(styles.headerView)
@@ -37,7 +37,10 @@ function Header({ menu,logo,title,backGround }:Props) {
             key={item?.key}
             text={item?.text}
             active={item?.key === currentKey}
-            onClick={() => setCurrentKey(item?.key)}
+            onClick={() => {
+              setCurrentKey(item?.key)
+              scrollToAnchor(item?.id)
+            }}
           />
         )
       })}
@@ -53,10 +56,10 @@ function Header({ menu,logo,title,backGround }:Props) {
   }
 
   return (
-    <div className={clsName} style={{background: backGround}}>
+    <div className={clsName} style={{ background: backGround }}>
       <div className={styles.headerInfoView}>
         <div className={styles.titleView}>
-          <img src={logo || logoImg} className={styles.logoImg}/>
+          <img src={logo || logoImg} className={styles.logoImg} />
           <span className={styles.title}>农业产业发展综合服务云平台</span>
           <span className={styles.line} />
           <span className={styles.text}>{title}</span>
