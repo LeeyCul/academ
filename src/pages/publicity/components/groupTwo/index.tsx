@@ -6,11 +6,12 @@ import styles from './style.less'
 interface Props {
   list: any[]
   titleImg: string
+  id: string
 }
 
-function GorupTwo({ list, titleImg }: Props) {
+function GorupTwo({ list, titleImg, id }: Props) {
   return (
-    <div className={styles.groupTwoView}>
+    <div className={styles.groupTwoView} id={id}>
       <div className={styles.titleImgView}>
         <img src={titleImg} />
       </div>
@@ -18,7 +19,7 @@ function GorupTwo({ list, titleImg }: Props) {
       <div className={styles.infoBox}>
         {list?.map(item => {
           const { img, content } = item || {}
-          return <SigleItem content={content} img={img} width={381} height={269}/>
+          return <SigleItem content={content} img={img} width={381} height={269} />
         })}
       </div>
     </div>

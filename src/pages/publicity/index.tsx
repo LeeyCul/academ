@@ -13,21 +13,21 @@ import C3 from './image/c3.png'
 import styles from './index.less';
 
 const menuList = [
-  { text: '品种', key: 0 },
-  { text: '技术', key: 1 },
-  { text: '成果', key: 2 },
+  { text: '品种', key: 0, id: 'pz' },
+  { text: '技术', key: 1, id: 'js' },
+  { text: '成果', key: 2, id: 'cg' },
 ]
 
 const list = [
-  {content: '首个中国菰染色体水平基因组组装和落粒性...',img: C1},
-  {content: '首个中国菰染色体水平基因组组装和落粒性...',img: C2},
-  {content: '首个中国菰染色体水平基因组组装和落粒性...',img: C3},
+  { content: '首个中国菰染色体水平基因组组装和落粒性...', img: C1 },
+  { content: '首个中国菰染色体水平基因组组装和落粒性...', img: C2 },
+  { content: '首个中国菰染色体水平基因组组装和落粒性...', img: C3 },
 ]
 
 export default function IndexPage() {
   return (
     <div className={styles.publicityView}>
-      <Header title='成果宣传' menu={menuList} backGround='#00A186'/>
+      <Header title='成果宣传' menu={menuList} backGround='#00A186' />
       <div className={styles.bannerView}>
         <img src={bannerImg} className={styles.bannerImg} />
         <div className={styles.bannerText}>
@@ -35,12 +35,12 @@ export default function IndexPage() {
           <span>农业的出路在现代化，农业现代化关键在科技进步和创新。成果宣传板<br />块致力于汇聚农业和农村经济重大科技研究成果，助力农业内涵式发展</span>
         </div>
       </div>
-      <div className={styles.titleImgView}>
+      <div className={styles.titleImgView} id='pz'>
         <img src={titleImg} />
       </div>
       <GroupOne />
-      <GroupTwo titleImg={title1Img} list={list}/>
-      <GroupTwo titleImg={title2Img} list={list}/>
+      <GroupTwo titleImg={title1Img} list={list} id='js' />
+      <GroupTwo titleImg={title2Img} list={list} id='cg' />
       <Footer />
     </div>
   );
