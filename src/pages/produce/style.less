@@ -1,0 +1,176 @@
+.serveView {
+  width: 100%;
+  .contentItem {
+    width: 100%;
+    padding: 70px 120px 0;
+    .title {
+      display: block;
+      height: 104px;
+      margin: 0 auto;
+    }
+    .contentBox {
+      margin-top: 60px;
+      height: 500px;
+      display: flex;
+      .leftMenu {
+        width: 216px;
+        height: 499px;
+        border-radius: 4px 4px 4px 4px;
+        opacity: 1;
+        position: relative;
+        padding-top: 12px;
+        .leftBg {
+          width: 216px;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+        h2 {
+          padding-left: 26px;
+          font-size: 40px;
+          font-family: Source Han Sans CN-Bold, Source Han Sans CN;
+          font-weight: bold;
+          color: #ffffff;
+        }
+        .number {
+          margin-left: 26px;
+          height: 46px;
+        }
+        .menuList {
+          position: absolute;
+          top: 154px;
+          width: 216px;
+          &:last-child {
+          }
+          p {
+            padding: 0 26px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 16px;
+            font-family: Source Han Sans CN-Bold, Source Han Sans CN;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+            &:after {
+              content: '';
+              display: block;
+              height: 1px;
+              width: 100%;
+              background-color: rgba(255, 255, 255, 0.25999999046325684);
+            }
+          }
+          .yellowHover {
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                #ee9f00 0%,
+                rgba(214, 143, 0, 0) 100%
+              );
+            }
+          }
+          .redHover {
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                #dc3826 0%,
+                rgba(247, 15, 15, 0) 100%
+              );
+            }
+          }
+          .greenHover {
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                #6e9b00 0%,
+                rgba(100, 170, 23, 0) 100%
+              );
+            }
+          }
+          .brownHover {
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                #a57f1c 0%,
+                rgba(170, 130, 29, 0) 100%
+              );
+            }
+          }
+          .blueHover {
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                #219de8 0%,
+                rgba(33, 157, 232, 0) 100%
+              );
+            }
+          }
+        }
+      }
+      .rightList {
+        width: 0;
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .rightItem {
+          .rightItemWrapper {
+            margin-left: auto;
+            height: 250px;
+            width: 214px;
+            img {
+              width: 100%;
+              height: 146px;
+              border-radius: 4px 4px 4px 4px;
+              transition: all 0.3s;
+              position: relative;
+              cursor: pointer;
+              &:hover {
+                box-shadow: 0px 14px 20px 1px
+                  rgba(208, 133, 54, 0.44999998807907104);
+                top: -4px;
+              }
+            }
+            .titleLabel {
+              margin: 4px 0 12px;
+              font-size: 14px;
+              font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+              font-weight: 500;
+              color: #37474f;
+              line-height: 24px;
+            }
+            .selfLabel {
+              display: inline-block;
+              width: 40px;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+              font-size: 14px;
+              font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+              font-weight: 400;
+              color: #008543;
+              background: rgba(0, 133, 67, 0.3);
+              margin-right: 4px;
+            }
+            .originPrice {
+              font-size: 18px;
+              font-family: Source Han Sans CN-Bold, Source Han Sans CN;
+              font-weight: bold;
+              color: #f98100;
+              line-height: 27px;
+              display: inline-block;
+              margin-right: 14px;
+            }
+            .salePrice {
+              width: 58px;
+              height: 20px;
+              font-size: 14px;
+              font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+              font-weight: 400;
+              color: #999999;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

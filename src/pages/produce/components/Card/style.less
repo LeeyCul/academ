@@ -1,0 +1,55 @@
+.cardView {
+  width: 580px;
+  height: 252px;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px 1px rgba(70, 96, 117, 0.11999999731779099);
+  border-radius: 4px 4px 4px 4px;
+  opacity: 1;
+  border: 1px solid #f1f1f1;
+
+  padding: 38px 33px;
+  display: flex;
+
+  &:hover {
+    box-shadow: 0px 10px 21px 1px rgba(70, 96, 117, 0.30000001192092896);
+  }
+
+  .imgsty {
+    width: 140px;
+    height: 140px;
+    margin-right: 42px;
+  }
+
+  .textView {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .titleBox {
+      .title {
+        font-size: 24px;
+        font-family: Source Han Sans CN-Bold, Source Han Sans CN;
+        font-weight: bold;
+        color: #37474f;
+        line-height: 37px;
+      }
+
+      .content {
+        font-size: 16px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: rgba(55, 71, 79, 0.7215686440467834);
+        line-height: 24px;
+        margin: 10px 0;
+      }
+    }
+
+    .linkMore {
+      font-size: 17px;
+      font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+      font-weight: 400;
+      color: #4a8dff;
+      line-height: 24px;
+    }
+  }
+}

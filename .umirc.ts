@@ -9,6 +9,7 @@ export default defineConfig({
     { path: '/serve', component: '@/pages/serve' },
     { path: '/science', component: '@/pages/science' },
     { path: '/translation', component: '@/pages/translation' },
+    { path: '/produce', component: '@/pages/produce' },
   ],
   fastRefresh: {},
 });
