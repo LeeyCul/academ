@@ -44,6 +44,7 @@ function Header() {
           <div className={styles.search}>
             <span>全站搜索</span>
             <input placeholder="关键字" />
+            <img src={require('../../image/search.png')} />
           </div>
           <Login />
         </div>
