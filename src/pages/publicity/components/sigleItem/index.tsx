@@ -12,7 +12,7 @@ interface Props {
 function SigleItem({ content, img, width, height }: Props) {
   return (
     <div className={styles.sigleItemView} style={{ width, height }}>
-      <img src={img} className={styles.imgSty} />
+      <img src={img} width={width} height={height} className={styles.imgSty} />
       <div className={styles.infoText}>{content}</div>
     </div>
   )
